@@ -1,0 +1,52 @@
+
+{% load static %}
+{% block 'main' %}
+<div class="container" id="about">
+    <div class="row mt-5 mb-3">
+        <h1 class="text-center text-white"><Strong>About Me</Strong></h1>
+        <div class="col-md-7 mt-2 text-white">
+            <p class="about-para">Hi I'm Sharada Gadadhe As a Full Stack Developer , I specialize in both the Frond-end and Back-end components of web applications. I have experience with a variety of programming languages, frameworks, and tools, allowing me to design and implement user-friendly interfaces and robust server-side features.
+
+                My skills include HTML, CSS, JavaScript for front-end development, and Python, Django for back-end development. I also have experience working with databases such as MySQL as well as knowledge of version control systems like Git.</p>
+                <H3> Skills:</H3>
+                <ul class="text-white about-ul">
+                    <li>HTML &nbsp;90%</li>
+                    <div class="progress">
+                        <div id="pr-html" class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 90%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    <Li>CSS &nbsp;85%</Li>
+                    <div class="progress">
+                        <div id="pr-css" class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 85%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    <li>JAVASCRIPT &nbsp;80%</li>
+                    <div class="progress">
+                        <div id="pr-js" class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 80%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    <li>PYTHON &nbsp;75%</li>
+                    <div class="progress">
+                        <div id="pr-python" class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    <li>DJANGO FRAMEWORK  &nbsp;70%</li>
+                    <div class="progress">
+                        <div id="pr-django" class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 70%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    <li>BOOTSTRAP &nbsp;95%</li>
+                    <div class="progress">
+                        <div id="pr-bootstrap" class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 95%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    <LI>SQL &nbsp;70%</LI>
+                    <div class="progress">
+                        <div id="pr-sql" class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 70%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    
+                </ul>
+                
+        </div>
+        <div class="col-md-5 mt-2">
+            <img src="{% static 'assets/images/my.jpg' %}" alt="profile picture" class="profile-img"/>
+            
+          </div>
+        </div>
+    </div>
+</div>
+{% endblock 'main' %}

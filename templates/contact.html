@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'main' %}
+<div class="container">
+    <div class="row mb-3 mt-5  ">
+        <h2 class="text-center"><Strong>Contact Me</Strong></h2>
+        <div class="col-md-6">
+            {% if errmsg %}
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>{{errmsg}}</strong> 
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+            {% endif %}
+            {% if success %}
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>{{success}}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+            {% endif %}
+            <form action="/contact" method="POST" class="mx-auto">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="fname" class="form-label">First Name: </label>
+                    <input type="text" class="form-control" id="fname" placeholder="Enter First Name" name="fname">
+                  </div>
+                  <div class="mb-3">
+                    <label for="lname" class="form-label">Last Name: </label>
+                    <input type="text" class="form-control" id="fname" placeholder="Enter Last Name" name="lname">
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email: </label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter Email Id" name="email">
+                  </div>
+                  <div class="mb-3">
+                    <label for="mob" class="form-label">Mobile Number: </label>
+                    <input type="number" class="form-control" id="mob" placeholder="Enter Mobile Number" name="mob">
+                  </div>
+                  <div class="mb-3">
+                    <label for="msg" class="form-label">Type Message</label>
+                    <textarea class="form-control" id="msg" rows="3" name="msg"></textarea>
+                  </div>
+                  <div class="mb-3">
+                    <button class=" btn btn-purple">Send</button>
+                  </div>
+                  
+            </form>
+              
+        </div>
+    </div>
+</div>
+
+{% endblock 'main' %}

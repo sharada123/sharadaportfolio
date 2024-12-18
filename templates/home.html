@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'main' %}
+<div class="container-fluid content">
+  
+    <div class="row  mb-1">
+        <div class="col-md-12 ">
+          <img src="{% static 'assets/images/bg1.jpg' %}" alt="full stack image" class="img-size" width="100%"/>
+            <div class="namesection">
+            <img src="{% static 'assets/images/one.png' %}" alt="profile Image" id="oneprofile" class="ms-4"/>
+              <p><h4 class="fw-bold text-white ms-4">Hello, I'm</h4><h2 class="fw-bold">Sharada Gadadhe</h2></p>
+            <p id="designation"><span class="sub-pink">Web Designer | </span><span class="sub-blue">Web Developer | </span><span class="sub-purple">Full Stack Web Developer</span></p>
+            <button type="button" class="btn btn-purple" onclick="window.open('tel:8080898558');">Hire Me</button>
+            <a href="{% static 'assets/images/resume.pdf' %}" class="btn btn-purple" target="_blank">Get Resume</a>
+            </div>
+            
+        </div>
+       
+    </div>
+</div>
+
+{% include 'about.html'%}
+{% include 'skillanimate.html' %}
+{% include 'service.html' %}
+<!--Project section-->
+<div class="container" id="project">
+    
+    <h1 class="text-center text-white"><strong>All Projects</strong></h1>
+    {% for x in project %}
+    <div class="row mt-3 border rounded">
+        <div class="col-md-4 mt-3 mb-3">
+            <img src="{{ x.img.url }}" alt="project image" width="200px" height="200px" class="rounded">
+        </div>
+        <div class="col-md-8 mt-3 mb-3">
+            {% if x.cat == "front end" %}
+            <p class="text-danger">Web Design</p>
+            {% elif x.cat == "back end" %}
+            <p class="text-success">Wed Developement</p>
+            {% else %}
+            <p class="text-success">Web Developement</p>
+            {% endif %}
+            <h5 class="fw-bold text-white">Project Title:&nbsp;{{ x.title }}</h5>
+            <p class="text-white">Description:&nbsp;{{ x.desc }}</p>
+            <p class="text-white">Technology Used:&nbsp;{{x.tech}}</p>
+            <p class="text-white">Source Link:&nbsp;<a href="{{ x.srclink }}">{{ x.srclink }}</a></p>
+        </div>
+    </div>
+    {% endfor %}
+    
+</div><!--Project section end-->
+{% include 'resume.html' %}
+<p><a href="https://wa.me/8080898558" target="_blank" class="wa-icon"><i class="fa-brands fa-whatsapp fa-beat fa-2xl" style="color: #2eea31;"></i></a></p>
+{% endblock 'main' %}
