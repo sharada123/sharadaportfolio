@@ -39,10 +39,10 @@
             {% else %}
             <p class="text-success">Web Developement</p>
             {% endif %}
-            <h5 class="fw-bold text-white">Project Title:&nbsp;{{ x.title }}</h5>
-            <p class="text-white">Description:&nbsp;{{ x.desc }}</p>
-            <p class="text-white">Technology Used:&nbsp;{{x.tech}}</p>
-            <p class="text-white">Source Link:&nbsp;<a href="{{ x.srclink }}">{{ x.srclink }}</a></p>
+            <h5 class="fw-bold">Project Title:&nbsp;{{ x.title }}</h5>
+            <p >Description:&nbsp;{{ x.desc }}</p>
+            <p><span class="fw-bold" >Technology Used</span>:&nbsp;{{x.tech}}</p>
+            <p class="fw-bold text-primary">Source Link:&nbsp;<a href="{{ x.srclink }}">{{ x.srclink }}</a></p>
         </div>
     </div>
     {% endfor %}
